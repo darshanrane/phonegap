@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>PhoneGap Plugins</title>
+    </head>
+    <body>
+        <div>
+            <h1>PHONEGAP PLUGINS</h1>
+            <div>
+                <select id="apiselect">
+                    <option value="intro">PhoneGap API</option>
+                    <option value="device">Device</option>
+                    <option value="battery">Battery</option>
+                    <option value="connection">Network Information</option>
+                    <option value="notification">Notification / Vibration</option>
+                    
+                    <option value="accelerometer">Accelerometer</option>
+                    <option value="compass">Compass</option>
+                    <option value="geolocation">Geolocation</option>                    
+                    
+                    <option value="contacts">Contacts</option>
+                    <option value="media">Media</option>
+                    <option value="camera">Camera</option>
+                    <option value="file">File</option>
+              
+                </select>
+             </div>
+        </div>
+        
+        <div class="api-div" id="intro-api">
+			<p>Select a PhoneGap Plugin.</p>
+        </div>
+        <div class="api-div" id="device-api">
+			<p>It provides the device's hardware and software info.</p>
+        </div>
+        <div class="api-div" id="battery-api">
+	        <p>It provides percentage of battery charge, values are form 0 to 100 and whether the device is plugged in or not.</p>
+			<div class="battery">
+            	<div class="batterylvl"></div>
+            </div>
+        </div>
+        <div class="api-div" id="connection-api">
+			<p>It provides information about the device's cellular and wifi connection, and whether the device has an internet connection.</p>
+            
+        </div>
+        <div class="api-div" id="notification-api">
+			<button id="alert">Show Alert Dialog</button><br><br>
+            <button id="confirm">Show Confirm Dialog</button><br><br>
+            <button id="beep">Beep</button><br><br>
+            <button id="vibrate">Vibrate</button><br><br>
+        </div>
+        <div class="api-div" id="accelerometer-api">
+			<p>This plugin provides access to the device's accelerometer. The accelerometer is a motion sensor that detects the change (delta) in movement relative to the current device orientation, in three dimensions along the x, y, and z axis.</p>
+            <div id="acc"></div>
+        </div>
+        <div class="api-div" id="compass-api">
+			<p>The compass is a sensor that detects the direction or heading that the device is pointed, typically from the top of the device. It measures the heading in degrees from 0 to 359.99, where 0 is north.</p>
+            <div id="com"></div>
+        </div>
+        <div class="api-div" id="geolocation-api">
+			<p>This plugin provides information about the device's location, such as latitude and longitude. Geolocation data is generally considered sensitive because it can reveal user's whereabouts and, if stored, the history of their travels.</p>
+            <div id="geo"></div>
+        </div>
+        <div class="api-div" id="contacts-api">
+			<button id="contactFind">Show all Contacts</button><br><br>
+            <div id="contactList"></div>
+        </div>
+        <div class="api-div" id="media-api">
+			<button id="playMedia">Play</button><br><br>
+            <button id="pauseMedia">Pause</button><br><br>
+            <button id="stopMedia">Stop</button><br><br>
+        </div>
+        <div class="api-div" id="camera-api">
+        	<button id="takePhoto">Click Photo</button><br>
+            <img id="photo" />
+        </div>
+        
+        <div class="api-div" id="file-api">
+        	<textarea id="textarea" rows="8" cols="28"></textarea><br>
+        	<button id="writeBtn">Write File</button><br>
+            <button id="readBtn">Read File</button>
+        </div>
+       
+        
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>

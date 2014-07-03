@@ -1,0 +1,74 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:16px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:30px;
+    text-align:center;
+}
+
+select{
+	width:250px;
+	height:40px;
+	margin-bottom:20px;
+	margin-left:35px;
+}
+
+.api-div{
+	width:80%;
+	padding:10%;
+	display:none;
+}
+.api-div p {
+	text-align:center;
+}
+
+.battery{
+	width:200px;
+	background-color:#999999;
+	margin-left:30px;
+	height:80px;
+}
+.batterylvl{
+	background-color:#0F0;
+	height:80px;
+}
+
+button{
+	width:255px;
+	height:60px;
+}
+
+#photo{
+	margin:30px;
+	-webkit-transform: rotate(90deg); 
+    transform: rotate(90deg);
+}
